@@ -2,6 +2,7 @@ import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { UsersModule } from './users/users.module';
 import { AuthModule } from './auth/auth.module';
+import { CostsModule } from './costs/costs.module';
 
 
 @Module({
@@ -10,14 +11,15 @@ import { AuthModule } from './auth/auth.module';
       type: 'mysql',
       host: 'localhost',
       port: 3307,
-      username: 'user_crud',
+      username: 'root',
       password: 'root',
-      database: 'db_crud',
+      database: 'counting_app',
       autoLoadEntities: true,
       synchronize: true,
     }),
     UsersModule,
     AuthModule,
+    CostsModule,
   ],
   controllers: [],
   providers: [],

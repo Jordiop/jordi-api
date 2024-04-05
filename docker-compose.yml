@@ -6,7 +6,7 @@ services:
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: db_crud
+      MYSQL_DATABASE: counting_app
       MYSQL_USER: user_crud
       MYSQL_PASSWORD: root
     volumes:
