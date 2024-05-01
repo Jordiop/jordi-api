@@ -61,7 +61,10 @@ $ yarn run test:cov
 ## Useful Comands
 
 ### Create new types
-```nest g res products --no-spec```
+
+```bash
+$ nest g res products --no-spec
+```
 
 ## Support
 

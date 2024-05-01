@@ -36,5 +36,4 @@ export class Product {
 
     @DeleteDateColumn()
     deletedAt: Date;
-
 }

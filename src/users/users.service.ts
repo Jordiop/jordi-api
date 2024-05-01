@@ -32,14 +32,18 @@ export class UsersService {
   }
 
   findOne(id: number) {
-    return `This action returns a #${id} user`;
+    return this.userRepository.findOne({
+      where: { id },
+      select: ['id', 'name', 'email', 'role', 'profileImage', 'createdAt', 'updatedAt'],
+    });
   }
 
+  // revisar
   update(id: number, updateUserDto: UpdateUserDto) {
-    return `This action updates a #${id} user`;
+    return `User #${id} has been updated.`;
   }
 
   remove(id: number) {
-    return `This action removes a #${id} user`;
+    return `User #${id} has been deleted.`;
   }
 }
